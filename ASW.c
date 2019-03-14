@@ -1,23 +1,26 @@
 #include "ASW.h"
 #include "mcal_encoder.h"
 
+T_F16 speed;
+
 void vInit_Everything()
 {
+    speed = 30; //generate a random speed
+    
 	RTE_vMotorInit();
 	RTE_vSetMotorDir(FORWARD);
-	RTE_vSetMotorSpeed(0);
+	RTE_vSetMotorSpeed(speed);
 	RTE_vSetAngle(90);
 }
 
 void vFollower()
 {
-	/*T_U8 readPins = RTE_LF_u8ReadPins();
+	T_U8 readPins = RTE_LF_u8ReadPins();
 	static T_U8 angle = 90;
 	static T_U8 lastAngle = 90;
-	static T_U16 whiteCounter = 0;
 	if(readPins != 0)
 	{	
-		RTE_vSetMotorSpeed(30);
+		RTE_vSetMotorSpeed(speed);
 		switch(readPins)
 		{
 			case 0b001100: 
@@ -61,12 +64,12 @@ void vFollower()
 	}
 	else
 	{
-		RTE_vSetMotorSpeed(0);
+//		RTE_vSetMotorSpeed(0);
 //		RTE_vSetAngle(lastAngle);
-	}*/
+	}
 	
     //PID implementation
-	int v[63] = { 0 }, cmd, err, kp, kd, ki, P, D, ref;
+	/*int v[63] = { 0 }, cmd, err, kp, kd, ki, P, D, ref;
 	static int perr = 0, I = 0;
 	T_U8 val;
 	v[1] = 1; v[3] = 2;	v[2] = 3; v[5] = 4; v[4] = 5; //linia e in dreapta
@@ -85,8 +88,9 @@ void vFollower()
 	}
 	else
 	{
-		RTE_vSetMotorSpeed(30);
+		RTE_vSetMotorSpeed(speed);
 	}
+        
 	if (v[val] != 0)
 	{
 		err = ref - v[val];
@@ -107,6 +111,9 @@ void vFollower()
 		//P1DC1 = cmd;
 		RTE_vSetAngle(60*cmd/3000-60);
 		perr = err;
-	}
+	}*/
+    
+    //stop if there is a obstacle
+    RTE_vHandleObst();
 }
 

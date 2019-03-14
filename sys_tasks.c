@@ -26,12 +26,12 @@ void TASK_Inits()
 
 void TASK_1ms()
 {
-    vHandleObst();
+    
 }
 
 void TASK_5ms()
 {
-	vFollower();
+	
 }
 
 void TASK_10ms()
@@ -41,7 +41,7 @@ void TASK_10ms()
 
 void TASK_100ms()
 { 
-
+    vFollower();
 }
  
 void TASK_500ms()

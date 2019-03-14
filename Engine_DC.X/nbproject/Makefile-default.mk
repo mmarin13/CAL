@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../main.c ../mcal_adc.c ../mcal_encoder.c ../mcal_gpio.c ../mcal_init.c ../mcal_interrupts.c ../mcal_osc.c ../mcal_pwm.c ../mcal_spi.c ../mcal_timers.c ../sys_schedule.c ../sys_tasks.c ../hal_motor.c ../hal_battery.c ../ASW.c ../../../M.D/ProiectCAL/hal_lf.c ../../../M.D/ProiectCAL/cal_servo.c ../../../M.D/ProiectCAL/RTE.c ../hal_obstacles.c
+SOURCEFILES_QUOTED_IF_SPACED=../main.c ../mcal_adc.c ../mcal_encoder.c ../mcal_gpio.c ../mcal_init.c ../mcal_interrupts.c ../mcal_osc.c ../mcal_pwm.c ../mcal_spi.c ../mcal_timers.c ../sys_schedule.c ../sys_tasks.c ../hal_motor.c ../hal_battery.c ../ASW.c ../hal_obstacles.c ../asw_com.c ../hal_nRF.c ../cal_servo.c ../hal_lf.c ../RTE.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/mcal_adc.o ${OBJECTDIR}/_ext/1472/mcal_encoder.o ${OBJECTDIR}/_ext/1472/mcal_gpio.o ${OBJECTDIR}/_ext/1472/mcal_init.o ${OBJECTDIR}/_ext/1472/mcal_interrupts.o ${OBJECTDIR}/_ext/1472/mcal_osc.o ${OBJECTDIR}/_ext/1472/mcal_pwm.o ${OBJECTDIR}/_ext/1472/mcal_spi.o ${OBJECTDIR}/_ext/1472/mcal_timers.o ${OBJECTDIR}/_ext/1472/sys_schedule.o ${OBJECTDIR}/_ext/1472/sys_tasks.o ${OBJECTDIR}/_ext/1472/hal_motor.o ${OBJECTDIR}/_ext/1472/hal_battery.o ${OBJECTDIR}/_ext/1472/ASW.o ${OBJECTDIR}/_ext/93165553/hal_lf.o ${OBJECTDIR}/_ext/93165553/cal_servo.o ${OBJECTDIR}/_ext/93165553/RTE.o ${OBJECTDIR}/_ext/1472/hal_obstacles.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/1472/mcal_adc.o.d ${OBJECTDIR}/_ext/1472/mcal_encoder.o.d ${OBJECTDIR}/_ext/1472/mcal_gpio.o.d ${OBJECTDIR}/_ext/1472/mcal_init.o.d ${OBJECTDIR}/_ext/1472/mcal_interrupts.o.d ${OBJECTDIR}/_ext/1472/mcal_osc.o.d ${OBJECTDIR}/_ext/1472/mcal_pwm.o.d ${OBJECTDIR}/_ext/1472/mcal_spi.o.d ${OBJECTDIR}/_ext/1472/mcal_timers.o.d ${OBJECTDIR}/_ext/1472/sys_schedule.o.d ${OBJECTDIR}/_ext/1472/sys_tasks.o.d ${OBJECTDIR}/_ext/1472/hal_motor.o.d ${OBJECTDIR}/_ext/1472/hal_battery.o.d ${OBJECTDIR}/_ext/1472/ASW.o.d ${OBJECTDIR}/_ext/93165553/hal_lf.o.d ${OBJECTDIR}/_ext/93165553/cal_servo.o.d ${OBJECTDIR}/_ext/93165553/RTE.o.d ${OBJECTDIR}/_ext/1472/hal_obstacles.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/mcal_adc.o ${OBJECTDIR}/_ext/1472/mcal_encoder.o ${OBJECTDIR}/_ext/1472/mcal_gpio.o ${OBJECTDIR}/_ext/1472/mcal_init.o ${OBJECTDIR}/_ext/1472/mcal_interrupts.o ${OBJECTDIR}/_ext/1472/mcal_osc.o ${OBJECTDIR}/_ext/1472/mcal_pwm.o ${OBJECTDIR}/_ext/1472/mcal_spi.o ${OBJECTDIR}/_ext/1472/mcal_timers.o ${OBJECTDIR}/_ext/1472/sys_schedule.o ${OBJECTDIR}/_ext/1472/sys_tasks.o ${OBJECTDIR}/_ext/1472/hal_motor.o ${OBJECTDIR}/_ext/1472/hal_battery.o ${OBJECTDIR}/_ext/1472/ASW.o ${OBJECTDIR}/_ext/1472/hal_obstacles.o ${OBJECTDIR}/_ext/1472/asw_com.o ${OBJECTDIR}/_ext/1472/hal_nRF.o ${OBJECTDIR}/_ext/1472/cal_servo.o ${OBJECTDIR}/_ext/1472/hal_lf.o ${OBJECTDIR}/_ext/1472/RTE.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/main.o.d ${OBJECTDIR}/_ext/1472/mcal_adc.o.d ${OBJECTDIR}/_ext/1472/mcal_encoder.o.d ${OBJECTDIR}/_ext/1472/mcal_gpio.o.d ${OBJECTDIR}/_ext/1472/mcal_init.o.d ${OBJECTDIR}/_ext/1472/mcal_interrupts.o.d ${OBJECTDIR}/_ext/1472/mcal_osc.o.d ${OBJECTDIR}/_ext/1472/mcal_pwm.o.d ${OBJECTDIR}/_ext/1472/mcal_spi.o.d ${OBJECTDIR}/_ext/1472/mcal_timers.o.d ${OBJECTDIR}/_ext/1472/sys_schedule.o.d ${OBJECTDIR}/_ext/1472/sys_tasks.o.d ${OBJECTDIR}/_ext/1472/hal_motor.o.d ${OBJECTDIR}/_ext/1472/hal_battery.o.d ${OBJECTDIR}/_ext/1472/ASW.o.d ${OBJECTDIR}/_ext/1472/hal_obstacles.o.d ${OBJECTDIR}/_ext/1472/asw_com.o.d ${OBJECTDIR}/_ext/1472/hal_nRF.o.d ${OBJECTDIR}/_ext/1472/cal_servo.o.d ${OBJECTDIR}/_ext/1472/hal_lf.o.d ${OBJECTDIR}/_ext/1472/RTE.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/mcal_adc.o ${OBJECTDIR}/_ext/1472/mcal_encoder.o ${OBJECTDIR}/_ext/1472/mcal_gpio.o ${OBJECTDIR}/_ext/1472/mcal_init.o ${OBJECTDIR}/_ext/1472/mcal_interrupts.o ${OBJECTDIR}/_ext/1472/mcal_osc.o ${OBJECTDIR}/_ext/1472/mcal_pwm.o ${OBJECTDIR}/_ext/1472/mcal_spi.o ${OBJECTDIR}/_ext/1472/mcal_timers.o ${OBJECTDIR}/_ext/1472/sys_schedule.o ${OBJECTDIR}/_ext/1472/sys_tasks.o ${OBJECTDIR}/_ext/1472/hal_motor.o ${OBJECTDIR}/_ext/1472/hal_battery.o ${OBJECTDIR}/_ext/1472/ASW.o ${OBJECTDIR}/_ext/93165553/hal_lf.o ${OBJECTDIR}/_ext/93165553/cal_servo.o ${OBJECTDIR}/_ext/93165553/RTE.o ${OBJECTDIR}/_ext/1472/hal_obstacles.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/main.o ${OBJECTDIR}/_ext/1472/mcal_adc.o ${OBJECTDIR}/_ext/1472/mcal_encoder.o ${OBJECTDIR}/_ext/1472/mcal_gpio.o ${OBJECTDIR}/_ext/1472/mcal_init.o ${OBJECTDIR}/_ext/1472/mcal_interrupts.o ${OBJECTDIR}/_ext/1472/mcal_osc.o ${OBJECTDIR}/_ext/1472/mcal_pwm.o ${OBJECTDIR}/_ext/1472/mcal_spi.o ${OBJECTDIR}/_ext/1472/mcal_timers.o ${OBJECTDIR}/_ext/1472/sys_schedule.o ${OBJECTDIR}/_ext/1472/sys_tasks.o ${OBJECTDIR}/_ext/1472/hal_motor.o ${OBJECTDIR}/_ext/1472/hal_battery.o ${OBJECTDIR}/_ext/1472/ASW.o ${OBJECTDIR}/_ext/1472/hal_obstacles.o ${OBJECTDIR}/_ext/1472/asw_com.o ${OBJECTDIR}/_ext/1472/hal_nRF.o ${OBJECTDIR}/_ext/1472/cal_servo.o ${OBJECTDIR}/_ext/1472/hal_lf.o ${OBJECTDIR}/_ext/1472/RTE.o
 
 # Source Files
-SOURCEFILES=../main.c ../mcal_adc.c ../mcal_encoder.c ../mcal_gpio.c ../mcal_init.c ../mcal_interrupts.c ../mcal_osc.c ../mcal_pwm.c ../mcal_spi.c ../mcal_timers.c ../sys_schedule.c ../sys_tasks.c ../hal_motor.c ../hal_battery.c ../ASW.c ../../../M.D/ProiectCAL/hal_lf.c ../../../M.D/ProiectCAL/cal_servo.c ../../../M.D/ProiectCAL/RTE.c ../hal_obstacles.c
+SOURCEFILES=../main.c ../mcal_adc.c ../mcal_encoder.c ../mcal_gpio.c ../mcal_init.c ../mcal_interrupts.c ../mcal_osc.c ../mcal_pwm.c ../mcal_spi.c ../mcal_timers.c ../sys_schedule.c ../sys_tasks.c ../hal_motor.c ../hal_battery.c ../ASW.c ../hal_obstacles.c ../asw_com.c ../hal_nRF.c ../cal_servo.c ../hal_lf.c ../RTE.c
 
 
 CFLAGS=
@@ -199,33 +199,47 @@ ${OBJECTDIR}/_ext/1472/ASW.o: ../ASW.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../ASW.c  -o ${OBJECTDIR}/_ext/1472/ASW.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/ASW.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/ASW.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/93165553/hal_lf.o: ../../../M.D/ProiectCAL/hal_lf.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/93165553" 
-	@${RM} ${OBJECTDIR}/_ext/93165553/hal_lf.o.d 
-	@${RM} ${OBJECTDIR}/_ext/93165553/hal_lf.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../M.D/ProiectCAL/hal_lf.c  -o ${OBJECTDIR}/_ext/93165553/hal_lf.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93165553/hal_lf.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/93165553/hal_lf.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/93165553/cal_servo.o: ../../../M.D/ProiectCAL/cal_servo.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/93165553" 
-	@${RM} ${OBJECTDIR}/_ext/93165553/cal_servo.o.d 
-	@${RM} ${OBJECTDIR}/_ext/93165553/cal_servo.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../M.D/ProiectCAL/cal_servo.c  -o ${OBJECTDIR}/_ext/93165553/cal_servo.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93165553/cal_servo.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/93165553/cal_servo.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/93165553/RTE.o: ../../../M.D/ProiectCAL/RTE.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/93165553" 
-	@${RM} ${OBJECTDIR}/_ext/93165553/RTE.o.d 
-	@${RM} ${OBJECTDIR}/_ext/93165553/RTE.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../M.D/ProiectCAL/RTE.c  -o ${OBJECTDIR}/_ext/93165553/RTE.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93165553/RTE.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/93165553/RTE.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/1472/hal_obstacles.o: ../hal_obstacles.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/hal_obstacles.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/hal_obstacles.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../hal_obstacles.c  -o ${OBJECTDIR}/_ext/1472/hal_obstacles.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/hal_obstacles.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/hal_obstacles.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/asw_com.o: ../asw_com.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/asw_com.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/asw_com.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../asw_com.c  -o ${OBJECTDIR}/_ext/1472/asw_com.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/asw_com.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/asw_com.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/hal_nRF.o: ../hal_nRF.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_nRF.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_nRF.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../hal_nRF.c  -o ${OBJECTDIR}/_ext/1472/hal_nRF.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/hal_nRF.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/hal_nRF.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/cal_servo.o: ../cal_servo.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/cal_servo.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/cal_servo.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../cal_servo.c  -o ${OBJECTDIR}/_ext/1472/cal_servo.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/cal_servo.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/cal_servo.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/hal_lf.o: ../hal_lf.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_lf.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_lf.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../hal_lf.c  -o ${OBJECTDIR}/_ext/1472/hal_lf.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/hal_lf.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/hal_lf.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/RTE.o: ../RTE.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/RTE.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/RTE.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../RTE.c  -o ${OBJECTDIR}/_ext/1472/RTE.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/RTE.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/RTE.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/_ext/1472/main.o: ../main.c  nbproject/Makefile-${CND_CONF}.mk
@@ -333,33 +347,47 @@ ${OBJECTDIR}/_ext/1472/ASW.o: ../ASW.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../ASW.c  -o ${OBJECTDIR}/_ext/1472/ASW.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/ASW.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/ASW.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/93165553/hal_lf.o: ../../../M.D/ProiectCAL/hal_lf.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/93165553" 
-	@${RM} ${OBJECTDIR}/_ext/93165553/hal_lf.o.d 
-	@${RM} ${OBJECTDIR}/_ext/93165553/hal_lf.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../M.D/ProiectCAL/hal_lf.c  -o ${OBJECTDIR}/_ext/93165553/hal_lf.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93165553/hal_lf.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/93165553/hal_lf.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/93165553/cal_servo.o: ../../../M.D/ProiectCAL/cal_servo.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/93165553" 
-	@${RM} ${OBJECTDIR}/_ext/93165553/cal_servo.o.d 
-	@${RM} ${OBJECTDIR}/_ext/93165553/cal_servo.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../M.D/ProiectCAL/cal_servo.c  -o ${OBJECTDIR}/_ext/93165553/cal_servo.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93165553/cal_servo.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/93165553/cal_servo.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/93165553/RTE.o: ../../../M.D/ProiectCAL/RTE.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/93165553" 
-	@${RM} ${OBJECTDIR}/_ext/93165553/RTE.o.d 
-	@${RM} ${OBJECTDIR}/_ext/93165553/RTE.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../M.D/ProiectCAL/RTE.c  -o ${OBJECTDIR}/_ext/93165553/RTE.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93165553/RTE.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/93165553/RTE.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/1472/hal_obstacles.o: ../hal_obstacles.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/hal_obstacles.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/hal_obstacles.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../hal_obstacles.c  -o ${OBJECTDIR}/_ext/1472/hal_obstacles.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/hal_obstacles.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/hal_obstacles.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/asw_com.o: ../asw_com.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/asw_com.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/asw_com.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../asw_com.c  -o ${OBJECTDIR}/_ext/1472/asw_com.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/asw_com.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/asw_com.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/hal_nRF.o: ../hal_nRF.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_nRF.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_nRF.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../hal_nRF.c  -o ${OBJECTDIR}/_ext/1472/hal_nRF.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/hal_nRF.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/hal_nRF.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/cal_servo.o: ../cal_servo.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/cal_servo.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/cal_servo.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../cal_servo.c  -o ${OBJECTDIR}/_ext/1472/cal_servo.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/cal_servo.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/cal_servo.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/hal_lf.o: ../hal_lf.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_lf.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/hal_lf.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../hal_lf.c  -o ${OBJECTDIR}/_ext/1472/hal_lf.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/hal_lf.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/hal_lf.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1472/RTE.o: ../RTE.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/RTE.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/RTE.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../RTE.c  -o ${OBJECTDIR}/_ext/1472/RTE.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1472/RTE.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/RTE.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

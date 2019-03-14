@@ -1,5 +1,6 @@
 #include "cal_servo.h"
 #include "mcal_gpio.h"
+#include "mcal_pwm.h"
 
 void vSetAngle(T_U8 u8Angle)
 {

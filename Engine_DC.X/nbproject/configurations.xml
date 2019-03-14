@@ -20,10 +20,12 @@
       <itemPath>../hal_motor.h</itemPath>
       <itemPath>../hal_battery.h</itemPath>
       <itemPath>../ASW.h</itemPath>
-      <itemPath>../../../M.D/ProiectCAL/hal_lf.h</itemPath>
-      <itemPath>../../../M.D/ProiectCAL/cal_servo.h</itemPath>
-      <itemPath>../../../M.D/ProiectCAL/RTE.h</itemPath>
       <itemPath>../hal_obstacles.h</itemPath>
+      <itemPath>../hal_nRF.h</itemPath>
+      <itemPath>../asw_com.h</itemPath>
+      <itemPath>../RTE.h</itemPath>
+      <itemPath>../cal_servo.h</itemPath>
+      <itemPath>../hal_lf.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -47,10 +49,12 @@
       <itemPath>../hal_motor.c</itemPath>
       <itemPath>../hal_battery.c</itemPath>
       <itemPath>../ASW.c</itemPath>
-      <itemPath>../../../M.D/ProiectCAL/hal_lf.c</itemPath>
-      <itemPath>../../../M.D/ProiectCAL/cal_servo.c</itemPath>
-      <itemPath>../../../M.D/ProiectCAL/RTE.c</itemPath>
       <itemPath>../hal_obstacles.c</itemPath>
+      <itemPath>../asw_com.c</itemPath>
+      <itemPath>../hal_nRF.c</itemPath>
+      <itemPath>../cal_servo.c</itemPath>
+      <itemPath>../hal_lf.c</itemPath>
+      <itemPath>../RTE.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
