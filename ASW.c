@@ -1,71 +1,82 @@
 #include "ASW.h"
 #include "mcal_encoder.h"
 
-T_F16 speed;
+T_F16 f16Speed;
+T_U8 u8IdRoad;
+enum _Direction direction;
+enum _State state;
 
 void vInit_Everything()
 {
-    speed = 30; //generate a random speed
+    f16Speed = 10 + rand() % 20; //generate a random speed [20 - 60]]
+    u8IdRoad = 0;
+    direction = rand() % 3; //generate random direction
+    state = S3;
     
 	RTE_vMotorInit();
 	RTE_vSetMotorDir(FORWARD);
-	RTE_vSetMotorSpeed(speed);
+	RTE_vSetMotorSpeed(f16Speed);
 	RTE_vSetAngle(90);
 }
 
 void vFollower()
 {
-	T_U8 readPins = RTE_LF_u8ReadPins();
-	static T_U8 angle = 90;
-	static T_U8 lastAngle = 90;
-	if(readPins != 0)
+	T_U8 u8ReadPins = RTE_LF_u8ReadPins();
+    //u8ReadPins = u8ReadPins & RTE_LF_u8ReadPins(); //try to avoid noise
+	static T_U8 u8Angle = 90;
+    static T_U8 u8PrevAngle = 0;
+	if(u8ReadPins != 0)
 	{	
-		RTE_vSetMotorSpeed(speed);
-		switch(readPins)
+		switch(u8ReadPins)
 		{
-			case 0b001100: 
-			case 0b000100:
+			case 0b001100:
 			case 0b001000:
-				angle = 90;
-				lastAngle = angle;
+				u8Angle = 90;
 				break;
 			case 0b000110: 
-			case 0b000010:
-				angle = 110;
-				lastAngle = angle;
+			case 0b000100:
+				u8Angle = 110;
 				break;
 			case 0b000011:
 			case 0b000001:  
-				angle = 120;
-				lastAngle = angle;
+				u8Angle = 120;
 				break;
 			case 0b011000:
-				angle = 80;
-				lastAngle = angle;
+				u8Angle = 80;
 				break;
 			case 0b110000: 
 			case 0b010000:
-				angle = 60;
-				lastAngle = angle;
+				u8Angle = 60;
 				break;
 			case 0b100000: 
-				angle = 60;
-				lastAngle = angle;
+				u8Angle = 60;
 				break;
 			case 0b111111: 
-				angle = 90;
-				lastAngle = angle;
+				u8Angle = 90;
 				break;
 			default:
-				angle = 120;
-				lastAngle = angle;
+                if(state == S3)
+                    switch(direction)
+                    {
+                        case LEFT:
+                          u8Angle = 60; 
+                          break;
+                        case CENTER:
+                            u8Angle = 90;
+                            break;
+                        case RIGHT:
+                            u8Angle = 120;
+                    }                    
 		}
-		RTE_vSetAngle(angle);
+        if(u8Angle != u8PrevAngle)
+        {
+            RTE_vSetAngle(u8Angle);
+            u8PrevAngle = u8Angle;
+        }		
 	}
 	else
 	{
-//		RTE_vSetMotorSpeed(0);
-//		RTE_vSetAngle(lastAngle);
+        //to do
 	}
 	
     //PID implementation
@@ -117,3 +128,71 @@ void vFollower()
     RTE_vHandleObst();
 }
 
+void vDoS1Action()
+{
+    static BOOL bPrevWasBlack = TRUE; 
+    T_U8 u8ReadPins = RTE_LF_u8ReadPins();
+    if(u8ReadPins == 0 && bPrevWasBlack)
+    {
+        u8IdRoad++;
+        bPrevWasBlack = FALSE;
+    }
+    else if (u8ReadPins == 0b01111110)
+    {
+        //go in next state
+        state = S2;
+    }
+    else
+    {
+        bPrevWasBlack = TRUE;
+    }
+}
+
+void vDoS2Action()
+{
+    //communication logic
+    //T_U8 message = (direction << 2) | u8IdRoad;
+            
+    T_U8 u8ReadPins = RTE_LF_u8ReadPins();
+    if (u8ReadPins == 0b01111110)
+    {
+        switch(direction)
+        {
+            case LEFT:
+              RTE_vSetAngle(60); 
+              break;
+            case CENTER:
+                RTE_vSetAngle(90);
+                break;
+            case RIGHT:
+                RTE_vSetAngle(120);
+        }
+        //go in next state
+        state = S3;
+    }
+}
+
+void vDoS3Action()
+{
+    T_U8 u8ReadPins = RTE_LF_u8ReadPins();
+    if(u8ReadPins == 0)
+    {
+        RTE_vSetMotorSpeed(0);
+    }
+}
+
+void vFSM()
+{
+    switch(state)
+    {
+        case S1:
+            vDoS1Action();
+            break;
+        case S2:
+            vDoS2Action();
+            break;
+        case S3:
+            vDoS3Action();
+            break;
+    }
+}
