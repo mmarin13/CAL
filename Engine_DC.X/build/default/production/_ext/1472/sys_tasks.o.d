@@ -19,4 +19,5 @@ build/default/production/_ext/1472/sys_tasks.o:  \
 ../RTE.h  \
 ../hal_nRF.h  \
  ../hal_obstacles.h  \
+../asw_com.h  \
 ../hal_battery.h 

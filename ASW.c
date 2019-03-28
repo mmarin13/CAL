@@ -1,21 +1,19 @@
 #include "ASW.h"
 #include "mcal_encoder.h"
 
-T_F16 f16Speed;
-T_U8 u8IdRoad;
-enum _Direction direction;
-enum _State state;
+struct _car car;
 
 void vInit_Everything()
 {
-    f16Speed = 10 + rand() % 20; //generate a random speed [20 - 60]]
-    u8IdRoad = 0;
-    direction = rand() % 3; //generate random direction
-    state = S3;
-    
+    car.f16Speed = 20 + TIM2_u16GetCount() % 40; //generate a random speed [20 - 60]]
+    car.u8IdRoad = 0;
+    car.state = S1;
+    car.bWait = FALSE;
+   
+    RTE_RF_vInit();
 	RTE_vMotorInit();
 	RTE_vSetMotorDir(FORWARD);
-	RTE_vSetMotorSpeed(f16Speed);
+	RTE_vSetMotorSpeed(car.f16Speed);
 	RTE_vSetAngle(90);
 }
 
@@ -55,8 +53,8 @@ void vFollower()
 				u8Angle = 90;
 				break;
 			default:
-                if(state == S3)
-                    switch(direction)
+                if(car.state == S3)
+                    switch(car.direction)
                     {
                         case LEFT:
                           u8Angle = 60; 
@@ -76,7 +74,7 @@ void vFollower()
 	}
 	else
 	{
-        //to do
+        //TBD
 	}
 	
     //PID implementation
@@ -134,13 +132,14 @@ void vDoS1Action()
     T_U8 u8ReadPins = RTE_LF_u8ReadPins();
     if(u8ReadPins == 0 && bPrevWasBlack)
     {
-        u8IdRoad++;
+        car.u8IdRoad++;
         bPrevWasBlack = FALSE;
     }
-    else if (u8ReadPins == 0b01111110)
+    else if (u8ReadPins == 0b111111)
     {
         //go in next state
-        state = S2;
+        car.state = S2;
+        car.direction = TIM2_u16GetCount() % 3; //generate a random direction
     }
     else
     {
@@ -151,12 +150,20 @@ void vDoS1Action()
 void vDoS2Action()
 {
     //communication logic
-    //T_U8 message = (direction << 2) | u8IdRoad;
-            
+    T_U8 u8Message = 0b10000;
+    u8Message = u8Message | (car.direction << 2);
+    u8Message = u8Message | (car.u8IdRoad);
+    //send message
+    COM_vSendMessage(u8Message);
+    //receive messages
+    COM_vStartListening();
+    COM_vCheckIRQ();
+    COM_vProcessFIFO();
+                
     T_U8 u8ReadPins = RTE_LF_u8ReadPins();
-    if (u8ReadPins == 0b01111110)
+    if (u8ReadPins == 0b111111)
     {
-        switch(direction)
+        switch(car.direction)
         {
             case LEFT:
               RTE_vSetAngle(60); 
@@ -167,8 +174,16 @@ void vDoS2Action()
             case RIGHT:
                 RTE_vSetAngle(120);
         }
-        //go in next state
-        state = S3;
+        if(car.bWait == TRUE)
+        {
+            RTE_vSetMotorSpeed(0);
+        }
+        else
+        {
+            RTE_vSetMotorSpeed(car.f16Speed);
+            //go in next state
+            car.state = S3;
+        }
     }
 }
 
@@ -177,13 +192,16 @@ void vDoS3Action()
     T_U8 u8ReadPins = RTE_LF_u8ReadPins();
     if(u8ReadPins == 0)
     {
+        //tell other that i have finished intersection
+        T_U8 u8Message = 0;
+        COM_vSendMessage(u8Message);
         RTE_vSetMotorSpeed(0);
     }
 }
 
 void vFSM()
 {
-    switch(state)
+    switch(car.state)
     {
         case S1:
             vDoS1Action();

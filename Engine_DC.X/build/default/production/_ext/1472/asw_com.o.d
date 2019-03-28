@@ -12,4 +12,6 @@ build/default/production/_ext/1472/asw_com.o:  \
 ../mcal_interrupts.h  \
  ../hal_nRF.h  \
 ../hal_obstacles.h  \
-../asw_com.h 
+../mcal_timers.h  \
+../asw_com.h  \
+../ASW.h 

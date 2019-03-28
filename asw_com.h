@@ -10,6 +10,7 @@
 
 #define ASW_COM_DIM_FIFO 64
 
+#include "ASW.h"
 
 void COM_vCheckIRQ(void);
 void COM_vSendMessage(T_U8 u8Message);

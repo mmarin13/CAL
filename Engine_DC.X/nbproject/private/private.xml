@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/CAL/MM/CAL-master/sys_tasks.c</file>
-            <file>file:/D:/CAL/MM/CAL-master/hal_obstacles.h</file>
-            <file>file:/D:/CAL/MM/CAL-master/hal_obstacles.c</file>
-            <file>file:/D:/CAL/MM/CAL-master/ASW.c</file>
+            <file>file:/D:/CAL/asw_com.c</file>
+            <file>file:/D:/CAL/ASW.h</file>
+            <file>file:/D:/CAL/sys_tasks.c</file>
+            <file>file:/D:/CAL/asw_com.h</file>
+            <file>file:/D:/CAL/ASW.c</file>
         </group>
     </open-files>
 </project-private>
