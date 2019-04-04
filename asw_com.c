@@ -78,6 +78,7 @@ void COM_vStartListening()
 ***********************************************************************************************************************/
 void COM_vProcessMessage(T_U8 u8Message)
 {
+    //static T_U8 u8Others = 0; 
     T_U8 u8OtherIdRoad = u8Message && 0x03;
     T_U8 u8OtherDirection = (u8Message && 0x0C) >> 2;
     T_U8 u8OtherDone = (u8Message & 0x10) >> 4;

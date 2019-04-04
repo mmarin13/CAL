@@ -36,12 +36,13 @@ void TASK_5ms()
 
 void TASK_10ms()
 {   
-    vFollower();
+    
 }
 
 void TASK_100ms()
 { 
-    //vFSM();
+    vFollower();
+    vFSM();
 }
  
 void TASK_500ms()
