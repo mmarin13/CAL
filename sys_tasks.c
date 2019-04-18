@@ -36,13 +36,17 @@ void TASK_5ms()
 
 void TASK_10ms()
 {   
-    
+    COM_vStartListening();
+    COM_vCheckIRQ();
+    COM_vProcessFIFO();
 }
 
 void TASK_100ms()
 { 
     vFollower();
-    vFSM();
+//    vFSM();
+    
+    COM_vSendMessage(0);
 }
  
 void TASK_500ms()

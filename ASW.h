@@ -24,4 +24,6 @@ void vDoS2Action();
 void vDoS3Action();
 void vFSM();
 
+void vWait();
+
 #endif

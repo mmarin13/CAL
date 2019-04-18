@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/Engine_DC.X.production.elf">
+  <executable name="dist/default/debug/Engine_DC.X.debug.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
-      <used>88</used>
-      <free>16296</free>
+      <used>168</used>
+      <free>16216</free>
     </memory>
     <memory name="program">
       <units>bytes</units>
