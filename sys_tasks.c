@@ -36,6 +36,7 @@ void TASK_5ms()
 
 void TASK_10ms()
 {   
+     //receive messages
     COM_vStartListening();
     COM_vCheckIRQ();
     COM_vProcessFIFO();
@@ -44,9 +45,7 @@ void TASK_10ms()
 void TASK_100ms()
 { 
     vFollower();
-//    vFSM();
-    
-    COM_vSendMessage(0);
+    vFSM();
 }
  
 void TASK_500ms()
@@ -56,5 +55,5 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-
+   
 }

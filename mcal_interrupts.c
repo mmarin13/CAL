@@ -53,9 +53,6 @@ void __attribute__((__interrupt__, no_auto_psv)) _INT2Interrupt(void)
 {
     /* Clear INT2 interrupt flag */
     IFS1bits.INT2IF = 0;
-    
-    /* Set for radio communication */
-    bRF_IRQ = TRUE;
 }
 
 

@@ -8,4 +8,8 @@ void vHandleObst()
     {
         vSetMotorSpeed(0);
     }
+//    else
+//    {
+//        vSetMotorSpeed(30);
+//    }
 }
