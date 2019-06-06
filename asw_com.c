@@ -78,90 +78,89 @@ void COM_vStartListening()
 ***********************************************************************************************************************/
 void COM_vProcessMessage(T_U8 u8Message)
 {
-    
-    car.bWait = TRUE;
-    //static T_U8 u8Others = 0; 
-//    T_U8 u8OtherIdRoad = u8Message && 0x03;
-//    T_U8 u8OtherDirection = (u8Message && 0x0C) >> 2;
-//    T_U8 u8OtherDone = (u8Message & 0x10) >> 4;
-//    if (u8OtherIdRoad == 0)
-//    {
-//        RTE_vSetMotorSpeed(0);
-//    }
-//    else if (u8OtherIdRoad == 1)
-//    {
-//        RTE_vSetMotorSpeed(10);
-//    }
-//    if(u8OtherDone) 
-//    {
-//        car.bWait = FALSE;
-//    }
-//    else
-//    {
-//        switch(car.u8IdRoad)
-//        {
-//            case 0:
-//                switch(car.direction)
-//                {
-//                    case LEFT:
-//                        if((u8OtherIdRoad == 2 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 3))
-//                            car.bWait = TRUE;
-//                        break;
-//                    case CENTER:
-//                        if(u8OtherIdRoad == 3)
-//                            car.bWait = TRUE;
-//                        break;
-//                    case RIGHT:
-//                        car.bWait = FALSE;
-//                }
-//                break;
-//            case 1:
-//                switch(car.direction)
-//                {
-//                    case LEFT:
-//                        if((u8OtherIdRoad == 3 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 0))
-//                            car.bWait = TRUE;
-//                        break;
-//                    case CENTER:
-//                        if(u8OtherIdRoad == 0)
-//                            car.bWait = TRUE;
-//                        break;
-//                    case RIGHT:
-//                        car.bWait = FALSE;
-//                }
-//                break;
-//            case 2:
-//                switch(car.direction)
-//                {
-//                    case LEFT:
-//                        if((u8OtherIdRoad == 0 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 1))
-//                            car.bWait = TRUE;
-//                        break;
-//                    case CENTER:
-//                        if(u8OtherIdRoad == 1)
-//                            car.bWait = TRUE;
-//                        break;
-//                    case RIGHT:
-//                        car.bWait = FALSE;
-//                }
-//                break;
-//            case 3:
-//                switch(car.direction)
-//                {
-//                    case LEFT:
-//                        if((u8OtherIdRoad == 1 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 2))
-//                            car.bWait = TRUE;
-//                        break;
-//                    case CENTER:
-//                        if(u8OtherIdRoad == 2)
-//                            car.bWait = TRUE;
-//                        break;
-//                    case RIGHT:
-//                        car.bWait = FALSE;
-//                }
-//                break;
-//        }
-//    }    
+    static BOOL u8Others[4] = {FALSE, FALSE, FALSE, FALSE}; 
+    T_U8 u8OtherIdRoad = u8Message & 0x03;
+    T_U8 u8OtherDirection = (u8Message & 0x0C) >> 2;
+    T_U8 u8OtherIn = (u8Message & 0x10) >> 4;
+    if(u8OtherIn == 0) 
+    {
+        u8Others[u8OtherIdRoad] = FALSE;
+    }
+    else
+    {
+        switch(car.u8IdRoad)
+        {
+            case 0:
+                switch(car.direction)
+                {
+                    case LEFT:
+                        if((u8OtherIdRoad == 2 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 3) ||
+                                (u8OtherIdRoad == 1 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case CENTER:
+                        if(u8OtherIdRoad == 3 || (u8OtherIdRoad == 1 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case RIGHT:
+                        u8Others[u8OtherIdRoad] = FALSE;
+                        break;
+                }
+                break;
+            case 1:
+                switch(car.direction)
+                {
+                    case LEFT:
+                        if((u8OtherIdRoad == 3 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 0)
+                                || (u8OtherIdRoad == 3 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case CENTER:
+                        if(u8OtherIdRoad == 0 || (u8OtherIdRoad == 2 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case RIGHT:
+                        u8Others[u8OtherIdRoad] = FALSE;
+                        break;
+                }
+                break;
+            case 2:
+                switch(car.direction)
+                {
+                    case LEFT:
+                        if((u8OtherIdRoad == 0 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 1) || 
+                                (u8OtherIdRoad == 3 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case CENTER:
+                        if(u8OtherIdRoad == 1 || (u8OtherIdRoad == 3 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case RIGHT:
+                        u8Others[u8OtherIdRoad] = FALSE;
+                        break;
+                }
+                break;
+            case 3:
+                switch(car.direction)
+                {
+                    case LEFT:
+                        if((u8OtherIdRoad == 1 && (u8OtherDirection == CENTER || u8OtherDirection == RIGHT)) || (u8OtherIdRoad == 2) || 
+                                (u8OtherIdRoad == 0 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case CENTER:
+                        if(u8OtherIdRoad == 2 || (u8OtherIdRoad == 0 && (u8OtherDirection == CENTER || u8OtherDirection == LEFT)))
+                            u8Others[u8OtherIdRoad] = TRUE;
+                        break;
+                    case RIGHT:
+                        u8Others[u8OtherIdRoad] = FALSE;
+                        break;
+                }
+                break;
+        }
+    }
+    car.bWait = u8Others[0] || u8Others[1] || u8Others[2] || u8Others[3];
 }
 
 /***********************************************************************************************************************

@@ -25,9 +25,9 @@ T_U8 LF_u8ReadPins(void)
 	T_U16 MASK = 63;
 	LF_vSetPinsDir(OUTPUT);
 	LF_vWritePins();
-	__delay_us(10);
+	__delay_us(50);
 	LF_vSetPinsDir(INPUT);
-	__delay_us(250);
+	__delay_us(500);
 	temp = GPIO_u16ReadPort(PORT_C);
 	val = temp & MASK;
 	return val;
